@@ -1,0 +1,95 @@
+
+
+    <html>
+        <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        </head>
+        <body>
+        <br/>
+        <style>
+        #calc{width:400px;height:350px;margin-left: 350px;margin-top: 150px;}
+        #btn{width:100%;height:40px;font-size:20px;}
+        body{ 
+          background: #eee url('https://source.unsplash.com/1600x900/?nature') no-repeat
+            center center/cover;
+          height: 100vh;
+          width: 100%;
+          overflow: hidden;}
+        </style>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index2.html">Chat Room <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cal.html">Claculater</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="snake.html">Snake Game</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tic.html" >Tic Tac Toe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="game3.html" >Flappy Bird</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        <form Name="calc">
+        <table id="calc" border=2>
+        <tr>
+        <td colspan=5><input id="btn" name="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"></td>
+        <td style="display:none"><input name="M" type="number"></td>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="MC" OnClick="calc.M.value=''"></td>
+        <td><input id="btn" type=button value="0" OnClick="calc.display.value+='0'"></td>
+        <td><input id="btn" type=button value="1" OnClick="calc.display.value+='1'"></td>
+        <td><input id="btn" type=button value="2" OnClick="calc.display.value+='2'"></td>
+        <td><input id="btn" type=button value="+" OnClick="calc.display.value+='+'"></td>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="MS" OnClick="calc.M.value=calc.display.value"></td>
+        <td><input id="btn" type=button value="3" OnClick="calc.display.value+='3'"></td>
+        <td><input id="btn" type=button value="4" OnClick="calc.display.value+='4'"></td>
+        <td><input id="btn" type=button value="5" OnClick="calc.display.value+='5'"></td>
+        <td><input id="btn" type=button value="-" OnClick="calc.display.value+='-'"></td>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="MR" OnClick="calc.display.value=calc.M.value"></td>
+        <td><input id="btn" type=button value="6" OnClick="calc.display.value+='6'"></td>
+        <td><input id="btn" type=button value="7" OnClick="calc.display.value+='7'"></td>
+        <td><input id="btn" type=button value="8" OnClick="calc.display.value+='8'"></td>
+        <td><input id="btn" type=button value="x" OnClick="calc.display.value+='*'"></td>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="M+" OnClick="calc.M.value=(Number(calc.M.value))+(Number(calc.display.value))"></td>
+        <td><input id="btn" type=button value="9" OnClick="calc.display.value+='9'"></td>
+        <td><input id="btn" type=button value="±" 
+         
+        OnClick="calc.display.value=(calc.display.value==Math.abs(calc.display.value)?-(calc.display.value):Math.abs(calc.display.value))">
+         
+        </td>
+        <td><input id="btn" type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
+        <td><input id="btn" type=button value="÷" OnClick="calc.display.value+='/'"></td>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="1/x" OnClick="calc.display.value=1/calc.display.value"></td>
+        <td><input id="btn" type=button value="." OnClick="calc.display.value+='.'"></td>
+        <td><input id="btn" type=button value="x2" OnClick="calc.display.value=Math.pow(calc.display.value,2)"></td>
+        <td><input id="btn" type=button value="√" OnClick="calc.display.value=Math.sqrt(calc.display.value)"></td>
+        <td><input id="btn" type=button value="C" OnClick="calc.display.value=''"></td>
+        </tr>
+        </table>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        </body>
+        </html>
+        

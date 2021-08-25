@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 1330px;
+  height: 50px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+.v{
+  width: 100px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+
+<div id="myForm">
+  <form class="form-container">
+    <h1>whatsapp</h1>
+    
+<ul class="chat-display v"></ul>
+    <textarea class="chat-box" placeholder="Type message.." name="msg" required></textarea>   
+    <button type="submit" class="btn">Send</button>
+</form>
+</div>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"> 
+</script>    
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+var parseQueryString = function (queryString) {   queryString = queryString.substring(1);   var params = {},     queries,     temp,     i,     l;    queries = queryString.split('&');    for (i = 0, l = queries.length; i < l; i++) {     temp = queries[i].split('=');     params[temp[0]] = temp[1];   }    return params; };

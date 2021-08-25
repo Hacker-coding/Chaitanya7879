@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="ICON" href="large.png">
+  <title>Life Up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+body{
+      background: #eee url('https://source.unsplash.com/1600x900/?nature') no-repeat; background-position: center;
+   background-repeat: no-repeat;
+   background-size: 10000px;
+
+}
+h1{
+  color: rgb(179, 89, 0);
+}
+form{
+  display: flex;
+}
+.chat-popup {
+  display: none;
+  position: fixed;
+  z-index: 9;
+}
+
+.form-container textarea {
+  width: 2900px;
+  height: 50px;
+  padding: 13px;
+  border: none;
+  resize: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  height: 50px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.dr{
+  margin-bottom: 90px;
+  padding-right: 15px;
+}
+.chat-display li{
+  list-style: none;
+  width: auto;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  }
+.send {
+  background-color: rgb(255, 255, 255);
+ align-self: flex-end;
+ padding-right: 5px;
+ padding-left: 5px; 
+ padding-top: 5px;
+ padding-bottom: 5px;
+ 
+}
+.recev{
+  background-color:rgb(23, 156, 122);
+  align-self: flex-start;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.name{
+   font-size: 10px;
+  
+}
+</style>
+</head>
+<body>
+
+
+<div id="myForm">
+  <div class="dr">
+  <ul class="chat-display "></ul>
+  </div>
+  <div class="fixed-bottom">
+  <form class="form-container">
+    
+    <textarea class="chat-box" placeholder="Type message.." name="msg" required></textarea>   
+    <button type="submit" class="btn" >Send</button>
+</form>
+</div>
+</div>
+<script src="query.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"> 
+</script>    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
